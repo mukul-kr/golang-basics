@@ -48,7 +48,12 @@ func main() {
 	arr2[0] = 10
 	fmt.Println("arr2", arr2)
 	fmt.Println("arr1", arr1)
+	arr3 := &arr1
+	arr3[0] = 100 //copying via referencing or better say it as that we have stored address of arr1 in arr3 and we will be making changes in arr1 though its address
+	fmt.Println("arr2", *arr3)
+	fmt.Println("arr1", arr1)
 
 	// If two array are of same type then we can eaislt compare it....
 	fmt.Println(arr1 == arr2)
+	fmt.Println(arr1 == *arr3)
 }
