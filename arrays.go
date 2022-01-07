@@ -29,4 +29,26 @@ func main() {
 	fmt.Println(d)
 	fmt.Println(e)
 
+	// Multi-dimensional array
+	arr := [3][3]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	fmt.Println(arr)
+
+	// "if ellipsis" "..." here length is determined by initialized elements
+	arr1 := [...]int{1, 2, 3, 4}
+	fmt.Println(len(arr1))
+	// above we have used len function which calculates the lenght of passed array
+
+	// traversing over an array of elements
+	for index, val := range arr1 {
+		fmt.Println(index, val)
+	}
+
+	// In go array is of value type and not reference type so changes made to a copy is not refelected back in original array
+	arr2 := arr1
+	arr2[0] = 10
+	fmt.Println("arr2", arr2)
+	fmt.Println("arr1", arr1)
+
+	// If two array are of same type then we can eaislt compare it....
+	fmt.Println(arr1 == arr2)
 }
