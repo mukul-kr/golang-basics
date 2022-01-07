@@ -56,4 +56,13 @@ func main() {
 	// If two array are of same type then we can eaislt compare it....
 	fmt.Println(arr1 == arr2)
 	fmt.Println(arr1 == *arr3)
+
+	// Passing array into function
+	fmt.Println(sum(arr1))
+}
+func sum(arr [4]int) (result int) {
+	for _, item := range arr {
+		result += item
+	}
+	return
 }
