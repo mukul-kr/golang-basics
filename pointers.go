@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+type Employee struct {
+	name  string
+	empid int
+}
+
 func goodfunction(ptr *int) {
 	*ptr = *ptr + 143
 }
@@ -25,4 +30,9 @@ func main() {
 
 	goodfunction(&b)
 	fmt.Println(b)
+
+	emp := Employee{"Mukul", 143}
+	ptrs := &emp
+	fmt.Println((*ptrs).name)
+
 }
