@@ -41,4 +41,12 @@ func main() {
 	ptrd := &d
 	p_ptrd := &ptrd
 	fmt.Println(**p_ptrd)
+
+	if ptrd == ptrd {
+		fmt.Println("yes")
+	}
+	if ptra == ptrb {
+		fmt.Println("yes yes")
+	}
+	// few things to note that ptr of different type cannot be compared and douuble pointer of same type to its single pointer also can not be compared.
 }
