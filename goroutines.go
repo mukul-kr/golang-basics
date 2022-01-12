@@ -46,5 +46,15 @@ func main() {
 		// fmt.Println("hello multiverse🌎🌍🌏")
 		// if no case ready then default case is called
 	}
+	ch3 := make(chan string)
+
+	go fun1(ch3)
+	// since both channel return at same time so any at random is called.
+	select {
+	case a := <-ch3:
+		fmt.Println(a, "1")
+	case b := <-ch3:
+		fmt.Println(b, "2")
+	}
 
 }
