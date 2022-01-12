@@ -42,6 +42,9 @@ func main() {
 		fmt.Println(option1) //this one gives output faster here as this one sleeps for about one second only so gives output through its channel faster and thus it this case runs...
 	case option2 := <-ch2:
 		fmt.Println(option2)
+		// default:
+		// fmt.Println("hello multiverse🌎🌍🌏")
+		// if no case ready then default case is called
 	}
 
 }
