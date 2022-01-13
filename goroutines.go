@@ -11,14 +11,19 @@ func display(str string) {
 	}
 }
 
+// A function that returns value a string to channel after one second
 func fun1(channel1 chan string) {
 	time.Sleep(1 * time.Second)
 	channel1 <- "Hi 🙂"
 }
+
+// A function that returns value a string to channel after two second
 func fun2(channel2 chan string) {
 	time.Sleep(2 * time.Second)
 	channel2 <- "hello 🤣"
 }
+
+// Main function 🥰
 func main() {
 
 	// Normal display of goroutine
@@ -57,4 +62,7 @@ func main() {
 		fmt.Println(b, "2")
 	}
 
+	close(ch1)
+	close(ch2)
+	close(ch3)
 }
