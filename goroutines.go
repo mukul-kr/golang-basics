@@ -62,6 +62,7 @@ func main() {
 		fmt.Println(b, "2")
 	}
 
+	// closing all channels so that no data shall be transfered from here on.
 	close(ch1)
 	close(ch2)
 	close(ch3)
