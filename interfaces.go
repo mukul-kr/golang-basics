@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// creating a type of interface which will calulate all passed function at time of passing it like later we can se that after creating interface we created struct over it so all function were calculated at that time only which is a good thing
+// creating a type of interface which will run in following given funcitons i guess...
 type interfeace_name interface {
 	add() int
 	subtraction() int
@@ -40,14 +40,12 @@ func main() {
 	fmt.Println(t.division())
 
 	var a1 interface {
-	} = 98.09
-
-	myfun(a1)
+	} = 21.01
+	myfun(a1) // a1 interface holds value 21.01 and my fun was called through a1 so will execute accordingly
 
 	var a2 interface {
-	} = "GeeksforGeeks"
-
-	myfun(a2)
+	} = "hi bitxh"
+	myfun(a2) // a2 interface holds value "hi bitxh" and my fun was called through a2 so will execute accordingly
 
 }
 
