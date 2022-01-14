@@ -30,8 +30,7 @@ func (t two_num) division() int {
 	return t.num1 / t.num2
 }
 func main() {
-	var t interfeace_name
-	t = two_num{
+	var t interfeace_name = two_num{
 		num1: 10,
 		num2: 5,
 	}
@@ -40,4 +39,19 @@ func main() {
 	fmt.Println(t.multiplication())
 	fmt.Println(t.division())
 
+	var a1 interface {
+	} = 98.09
+
+	myfun(a1)
+
+	var a2 interface {
+	} = "GeeksforGeeks"
+
+	myfun(a2)
+
+}
+
+func myfun(a interface{}) {
+	value, ok := a.(float64)
+	fmt.Println(value, ok)
 }
