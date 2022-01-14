@@ -29,6 +29,32 @@ func (t two_num) multiplication() int {
 func (t two_num) division() int {
 	return t.num1 / t.num2
 }
+
+type st1 struct {
+	ta1 int
+	na1 string
+}
+type st2 struct {
+	ta2 int
+	na2 string
+}
+
+var inter2 interface {
+	display()
+}
+
+func (s st2) display() {
+	fmt.Println(s.ta2)
+}
+
+var inter1 interface {
+	display()
+}
+
+func (s st1) display() {
+	fmt.Println(s.na1)
+}
+
 func main() {
 	var t interfeace_name = two_num{
 		num1: 10,
@@ -46,6 +72,18 @@ func main() {
 	var a2 interface {
 	} = "hi bitxh"
 	myfun(a2) // a2 interface holds value "hi bitxh" and my fun was called through a2 so will execute accordingly
+
+	// polymorphism through interfaces
+	s := st1{
+		ta1: 1,
+		na1: "hi",
+	}
+	s.display()
+	s2 := st1{
+		ta1: 2,
+		na1: "hello",
+	}
+	s2.display()
 
 }
 
